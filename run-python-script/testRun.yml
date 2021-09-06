@@ -1,0 +1,5 @@
+src:
+  class: File
+  path: test.py
+firstArg: memem
+secondArg: soos

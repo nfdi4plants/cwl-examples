@@ -1,0 +1,3 @@
+I am a Python Script running in docker
+you passed me some args:
+Namespace(firstArg='memem', secondArg='soos')
