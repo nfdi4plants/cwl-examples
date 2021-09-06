@@ -4,11 +4,16 @@ cwlVersion: v1.2
 class: CommandLineTool
 hints:
   DockerRequirement:
-    dockerPull: r-base:latest
-baseCommand: Rscript
+    dockerPull: mcr.microsoft.com/dotnet/sdk:5.0
+requirements:
+  - class: EnvVarRequirement
+    envDef:
+      - envName: DOTNET_NOLOGO
+        envValue: "true"
+baseCommand: [dotnet, fsi]
 stdout: output.txt
 inputs:
-  src:
+  scriptFile:
     type: File
     inputBinding:
       position: 1

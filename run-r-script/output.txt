@@ -1,1 +1,4 @@
 [1] "I am a R Script tunning in docker"
+[1] "memem" "soos" 
+[1] "you passed some cli args to me:"
+[1] "memem" "soos" 

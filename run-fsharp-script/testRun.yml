@@ -1,5 +1,5 @@
-src:
+scriptFile:
   class: File
-  path: test.r
+  path: test.fsx
 firstArg: memem
 secondArg: soos
