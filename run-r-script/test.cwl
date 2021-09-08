@@ -4,7 +4,14 @@ cwlVersion: v1.2
 class: CommandLineTool
 hints:
   DockerRequirement:
-    dockerPull: r-base:latest
+    # dockerImageId: r-script-runner
+    # dockerFile: 
+    #     $include: ./Dockerfile
+    dockerPull: rocker/tidyverse:4.1
+requirements:
+  EnvVarRequirement:
+    envDef:
+      ROOT: "true"
 baseCommand: Rscript
 stdout: output.txt
 inputs:

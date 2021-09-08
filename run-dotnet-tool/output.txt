@@ -1,0 +1,31 @@
+USAGE: ProteomIQon.PeptideSpectrumMatching [--help]
+                                           --instrumentoutput [<path>...]
+                                           --peptidedatabase <path>
+                                           --outputdirectory <path>
+                                           --paramfile <path>
+                                           [--parallelism-level <level>]
+                                           [--log-level <level>]
+                                           [--verbosity-level <level>]
+
+OPTIONS:
+
+    --instrumentoutput, -i [<path>...]
+                          Specify the mass spectrometry output, either specify
+                          a file directory containing the files to be analyzed
+                          or specify the file path of a single mzlite file.
+    --peptidedatabase, -d <path>
+                          Specify the file path of the peptide data base.
+    --outputdirectory, -o <path>
+                          Specify the output directory.
+    --paramfile, -p <path>
+                          Specify parameter file for peptide spectrum matching.
+    --parallelism-level, -c <level>
+                          Set the number of cores the programm can use.
+                          Parallelization occurs on file level. This flag is
+                          only of effect if a input directory (-i) is specified.
+    --log-level, -l <level>
+                          Set the log level.
+    --verbosity-level, -v <level>
+                          Set the verbosity level.
+    --help                display this list of options.
+
