@@ -1,0 +1,29 @@
+i can use plotly: <div id="396b6f4c-76a4-48f9-b951-c009f1ae0a9e" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_396b6f4c76a448f9b951c009f1ae0a9e = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":null}];
+            var layout = {"xaxis":{"showticklabels":false,"showline":false,"showgrid":false,"zeroline":false},"yaxis":{"showticklabels":false,"showline":false,"showgrid":false,"zeroline":false}};
+            var config = {};
+            Plotly.newPlot('396b6f4c-76a4-48f9-b951-c009f1ae0a9e', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_396b6f4c76a448f9b951c009f1ae0a9e();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_396b6f4c76a448f9b951c009f1ae0a9e();
+            }
+</script>
+
+firstArg: memem
+secondArg: soos
+whaddup

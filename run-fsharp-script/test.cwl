@@ -6,10 +6,12 @@ hints:
   DockerRequirement:
     dockerPull: mcr.microsoft.com/dotnet/sdk:5.0
 requirements:
-  - class: EnvVarRequirement
+  EnvVarRequirement:
     envDef:
       - envName: DOTNET_NOLOGO
         envValue: "true"
+  NetworkAccess:
+    networkAccess: true  
 baseCommand: [dotnet, fsi]
 stdout: output.txt
 inputs:
