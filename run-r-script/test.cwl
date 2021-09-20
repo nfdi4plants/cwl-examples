@@ -9,9 +9,14 @@ hints:
     #     $include: ./Dockerfile
     dockerPull: rocker/tidyverse:4.1
 requirements:
-  EnvVarRequirement:
-    envDef:
-      ROOT: "true"
+  - class: NetworkAccess
+    networkAccess: true  
+  - class: InlineJavascriptRequirement
+  - class: InitialWorkDirRequirement
+    listing:
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "./lib"
+        writable: true
 baseCommand: Rscript
 stdout: output.txt
 inputs:
