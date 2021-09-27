@@ -20,7 +20,7 @@ process bar{
         file y from bar_ch
         val z from params.secondArg
 
-    publishDir "$PWD/"
+    publishDir "$PWD/", mode: 'copy'
     output:
         file 'output.txt'
     script:

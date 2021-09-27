@@ -1,10 +1,15 @@
 cwlVersion: v1.2
 class: CommandLineTool
-hints:
-    DockerRequirement:
-        dockerPull: nextflow/nextflow:latest
+requirements:
+  - class: DockerRequirement
+    dockerPull: nextflow/nextflow:latest
+  - class: InlineJavascriptRequirement
+  - class: InitialWorkDirRequirement
+    listing:
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "/.nextflow/plugins"
+        writable: true
 baseCommand: [nextflow, run]
-stdout: output.txt
 inputs:
   src:
     type: File
@@ -18,7 +23,8 @@ inputs:
   secondArg:
     type: string
     inputBinding: {prefix: --secondArg, position: 3}
- 
 outputs:
-    example_out:
-        type: stdout
+  example_out:
+    type: File
+    outputBinding:
+      glob: $(runtime.outdir)/output.txt
