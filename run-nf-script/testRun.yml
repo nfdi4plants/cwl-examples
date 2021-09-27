@@ -1,0 +1,5 @@
+src:
+  class: File
+  path: test.nf
+firstArg: memem
+secondArg: soos
